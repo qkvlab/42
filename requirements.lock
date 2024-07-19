@@ -20,9 +20,11 @@ aiosignal==1.3.1
     # via aiohttp
 alembic==1.13.2
     # via optuna
+altair==5.3.0
+    # via streamlit
 annotated-types==0.7.0
     # via pydantic
-anthropic==0.31.1
+anthropic==0.31.2
     # via avatar-back
 anyio==4.4.0
     # via anthropic
@@ -40,6 +42,10 @@ banks==0.4.1
     # via avatar-back
 beautifulsoup4==4.12.3
     # via llama-index-readers-file
+blinker==1.8.2
+    # via streamlit
+cachetools==5.4.0
+    # via streamlit
 certifi==2024.7.4
     # via httpcore
     # via httpx
@@ -49,6 +55,7 @@ charset-normalizer==3.3.2
 click==8.1.7
     # via litellm
     # via nltk
+    # via streamlit
 colorlog==6.8.2
     # via optuna
 dataclasses-json==0.6.7
@@ -81,6 +88,10 @@ fsspec==2024.5.0
     # via huggingface-hub
     # via llama-index-core
     # via llama-index-legacy
+gitdb==4.0.11
+    # via gitpython
+gitpython==3.1.43
+    # via streamlit
 greenlet==3.0.3
     # via sqlalchemy
 h11==0.14.0
@@ -106,14 +117,17 @@ idna==3.7
 importlib-metadata==8.0.0
     # via litellm
 jinja2==3.1.4
+    # via altair
     # via banks
     # via litellm
+    # via pydeck
 jiter==0.5.0
     # via anthropic
 joblib==1.3.2
     # via dspy-ai
     # via nltk
 jsonschema==4.23.0
+    # via altair
     # via litellm
 jsonschema-specifications==2023.12.1
     # via jsonschema
@@ -170,11 +184,15 @@ llama-parse==0.4.8
     # via llama-index-readers-llama-parse
 mako==1.3.5
     # via alembic
+markdown-it-py==3.0.0
+    # via rich
 markupsafe==2.1.5
     # via jinja2
     # via mako
 marshmallow==3.21.3
     # via dataclasses-json
+mdurl==0.1.2
+    # via markdown-it-py
 multidict==6.0.5
     # via aiohttp
     # via yarl
@@ -192,14 +210,17 @@ nltk==3.8.1
     # via llama-index-core
     # via llama-index-legacy
 numpy==1.26.4
+    # via altair
     # via datasets
     # via llama-index-core
     # via llama-index-legacy
     # via optuna
     # via pandas
     # via pyarrow
+    # via pydeck
     # via sglang
-openai==1.35.14
+    # via streamlit
+openai==1.35.15
     # via avatar-back
     # via dspy-ai
     # via litellm
@@ -210,20 +231,28 @@ openai==1.35.14
 optuna==3.6.1
     # via dspy-ai
 packaging==24.1
+    # via altair
     # via datasets
     # via huggingface-hub
     # via marshmallow
     # via optuna
     # via replicate
+    # via streamlit
 pandas==2.2.2
+    # via altair
     # via datasets
     # via dspy-ai
     # via llama-index-core
     # via llama-index-legacy
+    # via streamlit
 pillow==10.4.0
     # via llama-index-core
+    # via streamlit
+protobuf==5.27.2
+    # via streamlit
 pyarrow==17.0.0
     # via datasets
+    # via streamlit
 pyarrow-hotfix==0.6
     # via datasets
 pydantic==2.8.2
@@ -235,6 +264,10 @@ pydantic==2.8.2
     # via replicate
 pydantic-core==2.20.1
     # via pydantic
+pydeck==0.9.1
+    # via streamlit
+pygments==2.18.0
+    # via rich
 pypdf==4.3.0
     # via llama-index-readers-file
 python-dateutil==2.9.0.post0
@@ -256,7 +289,7 @@ regex==2024.5.15
     # via dspy-ai
     # via nltk
     # via tiktoken
-replicate==0.28.0
+replicate==0.29.0
     # via avatar-back
 requests==2.32.3
     # via datasets
@@ -266,7 +299,10 @@ requests==2.32.3
     # via llama-index-core
     # via llama-index-legacy
     # via sglang
+    # via streamlit
     # via tiktoken
+rich==13.7.1
+    # via streamlit
 rpds-py==0.19.0
     # via jsonschema
     # via referencing
@@ -274,6 +310,8 @@ sglang==0.1.21
     # via avatar-back
 six==1.16.0
     # via python-dateutil
+smmap==5.0.1
+    # via gitdb
 sniffio==1.3.1
     # via anthropic
     # via anyio
@@ -288,6 +326,8 @@ sqlalchemy==2.0.31
     # via llama-index-core
     # via llama-index-legacy
     # via optuna
+streamlit==1.36.0
+    # via avatar-back
 striprtf==0.0.26
     # via llama-index-readers-file
 structlog==24.2.0
@@ -296,6 +336,7 @@ tenacity==8.5.0
     # via avatar-back
     # via llama-index-core
     # via llama-index-legacy
+    # via streamlit
 tiktoken==0.7.0
     # via litellm
     # via llama-index-core
@@ -304,6 +345,12 @@ tiktoken==0.7.0
 tokenizers==0.19.1
     # via anthropic
     # via litellm
+toml==0.10.2
+    # via streamlit
+toolz==0.12.1
+    # via altair
+tornado==6.4.1
+    # via streamlit
 tqdm==4.66.4
     # via avatar-back
     # via datasets
@@ -325,6 +372,7 @@ typing-extensions==4.12.2
     # via pydantic-core
     # via replicate
     # via sqlalchemy
+    # via streamlit
     # via typing-inspect
 typing-inspect==0.9.0
     # via dataclasses-json
@@ -336,6 +384,8 @@ ujson==5.10.0
     # via dspy-ai
 urllib3==2.2.2
     # via requests
+watchdog==4.0.1
+    # via avatar-back
 wrapt==1.16.0
     # via deprecated
     # via llama-index-core

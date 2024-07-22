@@ -209,14 +209,15 @@ def explore_hyperparameters(image_path):
     base_config = get_style_config("line_art")
 
     image_urls = [
-        # upload_image("images/team_pic/alex.jpg"),
-        # upload_image("images/team_pic/anonymous.jpg"),
-        # upload_image("images/team_pic/barry.jpg"),
-        # upload_image("images/team_pic/evan.jpg"),
-        # upload_image("images/team_pic/lei.jpg"),
-        # upload_image("images/team_pic/poppy.jpg"),
-        # upload_image("images/team_pic/xin.jpg"),
-        # upload_image("images/team_pic/yiwen.jpg"),
+        upload_image("211721366087_.pic.jpg"),
+        # upload_image("exps/team_pic/alex.jpg"),
+        # upload_image("exps/team_pic/anonymous.jpg"),
+        # upload_image("exps/team_pic/barry.jpg"),
+        # upload_image("exps/team_pic/evan.jpg"),
+        # upload_image("exps/team_pic/lei.jpg"),
+        # upload_image("exps/team_pic/poppy.jpg"),
+        # upload_image("exps/team_pic/xin.jpg"),
+        # upload_image("exps/team_pic/yiwen.jpg"),
     ]
     prompt_variations = [
         "line art drawing profile picture, minimalist, professional, sleek, modern, graphic, line art",
@@ -226,7 +227,7 @@ def explore_hyperparameters(image_path):
     width_height_pairs = [(512, 512), (1024, 1024)]
 
     results = []
-    experiment_folder = os.path.join("experiments", f"line_art_{uuid.uuid4().hex[:8]}")
+    experiment_folder = os.path.join("exps", f"line_art_{uuid.uuid4().hex[:8]}")
     os.makedirs(experiment_folder, exist_ok=True)
 
     def run_experiment(image_url, prompt, guidance_scale, num_inference_steps, width, height):
@@ -301,7 +302,7 @@ def explore_hyperparameters(image_path):
 
 
 if __name__ == "__main__":
-    image_path = "images/prompt/2.jpg"
+    image_path = "exps/prompt/2.jpg"
     results, experiment_folder = explore_hyperparameters(image_path)
     print(f"Experiment results saved in: {experiment_folder}")
     print(f"Total configurations tested: {len(results)}")

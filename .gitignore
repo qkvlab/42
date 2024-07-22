@@ -169,5 +169,5 @@ wandb/
 *.excalidraw.json
 *.private.env
 
-images/
+exps/
 todo/

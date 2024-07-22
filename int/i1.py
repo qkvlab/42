@@ -5,7 +5,7 @@ import tempfile
 import streamlit as st
 from PIL import Image
 
-from int.i3 import i2i_style
+from app import i2i_style
 
 
 def main():

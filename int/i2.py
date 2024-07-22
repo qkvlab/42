@@ -56,7 +56,7 @@ def get_caption(image_path):
 def main():
     st.title("Image Gallery")
 
-    image_folder = "images/2c166503-a49f-4422-913b-1a6348ca3dab"
+    image_folder = "exps/2c166503-a49f-4422-913b-1a6348ca3dab"
 
     if not os.path.exists(image_folder):
         st.error(f"Image folder not found: {image_folder}")
